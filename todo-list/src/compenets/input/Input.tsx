@@ -6,7 +6,7 @@ class Input extends Component {
         return (
             <div className='container'>
                 <input className='Input' type="text"></input>
-                <button className='Button'> Criiarar</button>
+                <button className='Button'> Crirar</button>
             </div>
         );
     }
