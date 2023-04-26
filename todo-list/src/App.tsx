@@ -8,7 +8,6 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <p>Conteúdo do meu aplicativo</p>
       </div>
     );
   }
