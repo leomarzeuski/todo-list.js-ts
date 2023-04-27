@@ -1,0 +1,18 @@
+.check-button {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.check-button.checked::after {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+}
