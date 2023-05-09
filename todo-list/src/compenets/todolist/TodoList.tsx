@@ -20,8 +20,15 @@ const TodoList: React.FC = () => {
     };
 
     const toggleTodo = (index: number) => {
+        debugger
         setTodos(prevTodos => prevTodos.map((todo, i) => i === index ? { ...todo, completed: !todo.completed } : todo));
     };
+
+    const deleteTodo = (index: number) => {
+        const newTodos = todos.filter((_, i) => i !== index);
+        setTodos(newTodos);
+    };
+
     return (
         <div className={styles.container}>
             <Input
@@ -37,10 +44,11 @@ const TodoList: React.FC = () => {
                 {todos.length === 0 ? (
                     <TodoEmpty />
                 ) : (
-                    todos.map((todo, index) => <Todo key={index} text={todo.text} completed={todo.completed} onClick={() => toggleTodo(index)} />)
+                    todos.map((todo, index) => <Todo key={index} text={todo.text} completed={todo.completed} onClick={() => toggleTodo(index)} onDelete={() => deleteTodo(index)} />)
                 )}
             </div>
         </div>
+
     );
 };
 

@@ -1,16 +1,16 @@
 import React from 'react';
-import './CheckButton.module.css';
+// import './CheckButton.module.css';
 
 interface CheckButtonProps {
     toggleCheck: () => void;
-    isChecked: boolean;
+    Checked: boolean;
 }
 
-const CheckButton: React.FC<CheckButtonProps> = ({ toggleCheck, isChecked }) => {
+const CheckButton: React.FC<CheckButtonProps> = ({ toggleCheck, Checked }) => {
     return (
-        <div className={`styles.button ${isChecked ? 'checked' : ''}`} onClick={toggleCheck}>
-            {isChecked && <span>✔</span>}
-        </div>
+        <button className={`styles.button ${Checked ? '✔' : ''}`} onClick={toggleCheck}>
+            {Checked && <span>✔</span>}
+        </button>
     );
 };
 

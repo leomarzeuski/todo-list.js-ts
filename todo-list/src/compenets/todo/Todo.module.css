@@ -1,9 +1,40 @@
 .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 98%;
     padding: 0.5rem;
     margin-bottom: 1rem;
     background-color: #3b3a3a;
     border-radius: 8px;
+}
+
+.deleteButton {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 5px 5px 5px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #313030;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(30, 44, 32, 0.25);
+}
+
+.deleteButton:hover {
+    border-color: #ff6464;
+    background-color: #ff6464;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(100, 108, 255, 0.25);
+}
+
+.deleteButton:focus,
+.deleteButton:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+    border-color: #ff6464;
+    box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.5);
 }
